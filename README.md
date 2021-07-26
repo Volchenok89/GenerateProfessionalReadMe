@@ -10,9 +10,11 @@
   [Deployed link](https://github.com/Volchenok89/GenerateProfessionalReadMe)
 
   ## Table of Contents
-  * [Installation](#installation)
+* [Installation](#installation)
   * [Usage](#usage)
-  * [Contributing](#contributing)
+  * [Contribution](#contribution)
+  * [Tests](#tests)
+  * [Credits](#credits)
   * [License](#license)
   * [Questions](#questions)
 
@@ -35,6 +37,12 @@
   ## Contribution
   Volchenok89
 
+
+  ## Test
+  No tests in this repo project.
+ 
+  ## Credits
+  This project was started using a starter code from: https://github.com/coding-boot-camp/potential-enigma
  
   ## License
   [MIT License](https://choosealicense.com/licenses/mit/)
