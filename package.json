@@ -1,0 +1,22 @@
+{
+  "name": "challenge9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Volchenok89/GenerateProfessionalReadMe.git"
+  },
+  "author": "Shannon Nell",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Volchenok89/GenerateProfessionalReadMe/issues"
+  },
+  "homepage": "https://github.com/Volchenok89/GenerateProfessionalReadMe#readme",
+  "dependencies": {
+    "inquirer": "^8.1.0"
+  }
+}
