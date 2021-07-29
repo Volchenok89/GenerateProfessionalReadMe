@@ -10,7 +10,7 @@
   [Deployed link](https://github.com/Volchenok89/GenerateProfessionalReadMe)
 
   ## Table of Contents
-* [Installation](#installation)
+  * [Installation](#installation)
   * [Usage](#usage)
   * [Contribution](#contribution)
   * [Tests](#tests)
@@ -20,9 +20,9 @@
 
   ## Installation
   
-  *Be in your root repository
-  *Open command line.
-  *Run "npm install inquirer".
+  * Be in your root repository
+  * Open command line.
+  * Run "npm install inquirer".
   
 
   ## Usage
