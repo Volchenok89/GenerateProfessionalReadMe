@@ -1,5 +1,5 @@
   
-// render license Badge, return '' if no license selected
+// License badge//
 function renderLicenseBadge(license) {
   if (license) {
     switch (license) {
@@ -17,28 +17,29 @@ function renderLicenseBadge(license) {
   }
 };
 
-// function that returns the license link
-// If there is no license, return an empty string
+// Funcion returning the license link//
 function renderLicenseLink(license) {
-  // console.log(license);
+  
   if (license) {
     switch (license) {
-      case (license = 'MIT License'):
-        return `[MIT License](https://choosealicense.com/licenses/mit/)`;
-      case (license = 'GNU GPL License'):
-        return `[GNU GPL 3.0 License](https://choosealicense.com/licenses/gpl-3.0/)`;
-      case (license = 'Apache License 2.0'):
-        return `[Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)`;
-      case (license = 'Mozilla Public License 2.0'):
+      case (license = "Mozilla Public License 2.0"):
         return `[Mozilla Public License 2.0](https://choosealicense.com/licenses/mpl-2.0/)`;
+      case (license = "MIT License"):
+        return `[MIT License](https://choosealicense.com/licenses/mit/)`;
+      case (license = "GNU GPL License"):
+        return `[GNU GPL 3.0 License](https://choosealicense.com/licenses/gpl-3.0/)`;
+      case (license = "Apache License 2.0"):
+        return `[Apache License 2.0](https://choosealicense.com/licenses/apache-2.0/)`;
+    
+    
+
     };
   } else {
-    return 'No license provided.';
+    return "No license provided.";
   }
 };
 
-// function that returns the license section of README
-// If there is no license, return an empty string
+// Function returning the license section of the README file//
 function renderLicenseSection(license) {
   if (license) {
     return `${renderLicenseLink(license)}`
@@ -46,7 +47,7 @@ function renderLicenseSection(license) {
   return '';
 }
 
-//generate markdown for README
+//Generate a markdown for README file//
 function generateMarkdown(data) {
   return `
   # ${data.title}  
@@ -57,7 +58,7 @@ function generateMarkdown(data) {
   ## Table of Contents
   * [Installation](#installation)
   * [Usage](#usage)
-  * [Contributing](#contributing)
+  * [Contribution](#contribution)
   * [Tests](#tests)
   * [Credits](#credits)
   * [License](#license)
@@ -67,7 +68,7 @@ function generateMarkdown(data) {
   ## Usage
   ${data.usage}
   ![Project Screenshot](/assets/images/${data.screenshot})
-  ## Contributing
+  ## Contribution
   ${data.contribution}
   ## Tests
   ${data.test}
@@ -76,11 +77,13 @@ function generateMarkdown(data) {
   ## License
   ${renderLicenseSection(data.license)}
   
+
   ## Questions
-  If you have any questions, please feel free to reach out via email or head over to my GitHub account.
+  If you have questions, please reach out via email or my GitHub account.
   * GitHub: [${data.github}](https://github.com/${data.github})
   * E-mail: [${data.email}](mailto:${data.email})
   `;
 }
 
 module.exports = generateMarkdown;
+

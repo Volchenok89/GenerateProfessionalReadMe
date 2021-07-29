@@ -1,105 +1,115 @@
 //node packages
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require("../Challenge9/generateMarkdown.js");
 
 //prompt user for answers to questions
 const promptUser = () => {
     return inquirer.prompt([
         { 
-            //project information
-            type: 'input', 
-            name: 'title',
-            message: 'What is your project title? (Required)',
+            //Questions//
+            type: "input", 
+            name: "title",
+            message: "What is the title of your project?",
             validate: titleInput => {
                 if(titleInput) {
                     return true;
                 } else {
-                    console.log('Please enter your project title!'); 
+                    console.log("Enter the title of your project"); 
                     return false;
                 }
             }
         },
         {
-            type: 'input',
-            name: 'description',
-            message: 'Provide a description of the project (Required)',
+            //Description//
+            type: "input",
+            name: "description",
+            message: "Describe your project",
             validate: descriptionInput => {
                 if(descriptionInput) {
                     return true;
                 } else {
-                    console.log('Please enter a project description!'); 
+                    console.log("Enter a description of your"); 
                     return false;
                 }
             }
         },
         {
-            type: 'confirm',
-            name: 'linkConfirm',
-            message: "Would you like to include a link to your deployed project?",
+            //Link question//
+            type: "confirm",
+            name: "linkProject",
+            message: "Do you want to add a link for the project",
             default: true,
         },
         {
-            type: 'input',
-            name: 'link',
-            message: "Enter your link.",
-            when: ({ linkConfirm }) => linkConfirm
+            //Link//
+            type: "input",
+            name: "link",
+            message: "Enter the link",
+            when: ({ linkProject }) => linkProject
         },
         {
-            type: 'input',
-            name: 'installation',
-            message: 'How do users install your app?',
+            //Installation//
+            type: "input",
+            name: "installation",
+            message: "How will your app be installed?",
         },
         {
-            type: 'input', 
-            name: 'usage', 
-            message: 'How do users use your app?'   
+            //Usage//
+            type: "input", 
+            name: "usage", 
+            message: "How will your app be used?"  
         },
         {
-            type: 'input',
-            name: 'screenshot', 
-            message: 'If you would like to add a screenshot, create an assets/images folder in your repo and upload your screenshot to it. As long as your folders are labelled correctly, all you need to do is enter your FILENAME here and it will be added to your README. Ex. "./assets/images/screenshot.png" where "screenshot.png" is your FILENAME.' 
+            //Screenshot//
+            type: "input",
+            name: "screenshot", 
+            message: "To add a screenshot, create a folder assets/images and add the screenshot inside. Enter your FILENAME and it will be added to your new README."
+            
         },
         {
-            type: 'input', 
-            name: 'contribution', 
-            message: 'What are the contribution guidelines for your app?'   
+            //Contribution//
+            type: "input", 
+            name: "contribution", 
+            message: "Enter your app's contribution guide."   
         },
         {
-            type: 'input', 
-            name: 'test', 
-            message: 'What are the test instructions for your app?'   
+            //Test//
+            type: "input", 
+            name: "test", 
+            message: "Enter your test instructions."   
         },
         {
-            //Credits information
-            type: 'input', 
-            name: 'credits',
-            message: 'List your collaborators, if any, with links to their GitHub profiles if you wish.'
+            //Credits//
+            type: "input", 
+            name: "credits",
+            message: "List your collaborators id you have them."
         },
         {
-            //license information
-            type: 'list',
-            name: 'license',
-            message: 'What licence did you use?',
-            choices: ['MIT License', 'GNU GPL License', 'Apache License 2.0', 'Mozilla Public License 2.0']
+            //License//
+            type: "list",
+            name: "license",
+            message: "What type of license you used?",
+            choices: ["Mozilla Public License 2.0", "GNU GPL License", "MIT License", "Apache License 2.0"]
         },
         {
-            //user information
-            type: 'input',
-            name: 'github',
-            message: 'Enter your GitHub Username'
+            //User//
+            type: "input",
+            name: "github",
+            message: "Enter your Github Name:"
         },
         {
-            type: 'input',
-            name: 'email',
-            message: 'Enter your email'
+            //Email//
+            type: "input",
+            name: "email",
+            message: "Enter your email:"
         }
     ])
     .then(readmeData => {
         return generateMarkdown(readmeData);
     })
     .then(readmeFile => {
-        return writeToFile('./dist/README.md', readmeFile);
+        return writeToFile("./dist/README.md", readmeFile);
     })
     .catch(err => {
         console.log(err);
@@ -110,19 +120,19 @@ const promptUser = () => {
 function writeToFile(fileName, data) {
     return new Promise((resolve, reject) => {
         fs.writeFile(fileName, data, err => {
-            //if error, reject promise
+            //If error, reject//
             if (err) {
                 reject(err);
                 return;
             }
-            //if all is well
+            //If no error//
             resolve({
                 ok: true, 
-                message: 'File created!'
+                message: "File created!"
             });
         });
     });
 };
 
-//initiallize app
+//initiallize the app//
 promptUser();
