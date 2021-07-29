@@ -27,9 +27,9 @@
 
   ## Usage
   
-  *Open the command line and type "node index.js".
-  *Asnwer the questions detailing everything for a better and more complete README information.
-  *Your file will be ready to be read in your dist folder.
+  * Open the command line and type "node index.js".
+  * Asnwer the questions detailing everything for a better and more complete README information.
+  * Your file will be ready to be read in your dist folder.
   
   
   ******SCREENSHOT HERE******
