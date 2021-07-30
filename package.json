@@ -1,7 +1,7 @@
 {
   "name": "challenge9",
   "version": "1.0.0",
-  "description": "",
+  "description": "A professional README generator using node.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/Volchenok89/GenerateProfessionalReadMe#readme",
   "dependencies": {
-    "inquirer": "^8.1.0"
+    "inquirer": "^8.1.2"
   }
 }
