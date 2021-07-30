@@ -7,7 +7,7 @@
   By answering the questions asked by the inquirer, a README file will be created with all the information needed using the command line.
   
 
-  [Deployed link](https://github.com/Volchenok89/GenerateProfessionalReadMe)
+  [Deployed link](https://youtu.be/5kVKTGgnEO0)
 
   ## Table of Contents
   * [Installation](#installation)
