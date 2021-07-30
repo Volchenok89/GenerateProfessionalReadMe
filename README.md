@@ -31,7 +31,8 @@
   * Asnwer the questions detailing everything for a better and more complete README information.
   * Your file will be ready to be read in your dist folder.
   
-  ![Vsandterminalscreenshot](https://user-images.githubusercontent.com/77917594/127574347-bf8d8e73-3e65-4651-992f-90ff1bd65f31.png)
+![VSandterminal](https://user-images.githubusercontent.com/77917594/127581403-54df9264-ab04-4a77-bf7e-56faaf9f8280.png)
+
 
 
   ## Contribution
